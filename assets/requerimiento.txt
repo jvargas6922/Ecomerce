@@ -1,0 +1,31 @@
+ Se solicita crear un ecomer donde se presente productos y las siguientes vistas.
+ Definir las paginas que tendra:
+  1- login
+  2- inicio
+  3- nosotros
+  4- catalogo
+  5- carro de compra
+  6- contacto
+
+  Definir funciones o lo que tendra nuestras paginas.
+  - login
+    * primero la primera pagina siempre se llama index.html
+    * validamos que el usuario tenga las credenciales que vamos a definir como correctas (en duro en el codigo)
+
+- inicio
+    agregar un barr a de navegacion donde me permita ir a todas las otras vistas(Menu)
+    contenido principal y contenido secundario.
+    agregar contenido acorde al producto o servicio que seleccionemos
+
+- nosotros 
+    agregar un encabezado (h1) correspondiente al nombre de la empresa para describir
+    agregar una breve descripcion de la empresa.
+
+- catalogo
+    definir la galeria de imagenes de productos donde el usuario pueda seleccionar.
+
+- carro de compra
+    contendra el diseño para permitir al usuario poder ver los productos seleccionados.
+
+- contacto  
+    debe permitir agregar la informacion para que el usuario nos contacte (formulario)
