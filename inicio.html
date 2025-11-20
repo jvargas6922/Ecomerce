@@ -1,11 +1,395 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Inicio - E-commerce</title>
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
 <body>
-    <h1>Inicio</h1>
+    <!-- Barra de Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="inicio.html">
+                <i class="bi bi-shop"></i> E-commerce
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="inicio.html">
+                            <i class="bi bi-house-door"></i> Inicio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="menuNosotros">
+                            <i class="bi bi-box-seam"></i> Nosotros
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="menuCatalogo">
+                            <i class="bi bi-grid"></i> Catalogo
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="menuContacto">
+                            <i class="bi bi-envelope"></i> Contacto
+                        </a>
+                    </li>
+                </ul>
+                <form class="d-flex me-3" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Buscar productos..." aria-label="Search" id="searchInput">
+                    <button class="btn btn-light" type="submit" id="btnSearch">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </form>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="menuCarrito">
+                            <i class="bi bi-cart3"></i> Carrito
+                            <span class="badge bg-danger" id="cartCount">0</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html" id="menuLogin">
+                            <i class="bi bi-person-circle"></i> Iniciar Sesión
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <!-- Contenido Principal - Productos -->
+            <main class="col-lg-12 col-md-12">
+                <!-- Banner Principal -->
+                <div id="carouselBanner" class="carousel slide mb-4 shadow" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselBanner" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselBanner" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselBanner" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner rounded">
+                        <div class="carousel-item active">
+                            <div class="bg-primary text-white p-5 rounded" style="min-height: 300px; display: flex; align-items: center; justify-content: center;">
+                                <div class="text-center">
+                                    <h1>¡Bienvenido a nuestra tienda!</h1>
+                                    <p class="lead">Encuentra los mejores productos al mejor precio</p>
+                                    <button class="btn btn-light btn-lg" id="btnComprarAhora1">Comprar Ahora</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="bg-success text-white p-5 rounded" style="min-height: 300px; display: flex; align-items: center; justify-content: center;">
+                                <div class="text-center">
+                                    <h1>Envío Gratis</h1>
+                                    <p class="lead">En compras mayores a $500</p>
+                                    <button class="btn btn-light btn-lg" id="btnVerMas1">Ver Más</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="bg-warning text-dark p-5 rounded" style="min-height: 300px; display: flex; align-items: center; justify-content: center;">
+                                <div class="text-center">
+                                    <h1>Nuevos Productos</h1>
+                                    <p class="lead">¡Descubre nuestra nueva colección!</p>
+                                    <button class="btn btn-dark btn-lg" id="btnDescubrir1">Descubrir</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselBanner" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselBanner" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+
+                <!-- Sección de Productos Destacados -->
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h3><i class="bi bi-star-fill text-warning"></i> Productos Destacados</h3>
+                    <div class="btn-group" role="group" aria-label="Vista">
+                        <button type="button" class="btn btn-outline-primary active" id="btnVistaGrid">
+                            <i class="bi bi-grid-3x3-gap"></i>
+                        </button>
+                        <button type="button" class="btn btn-outline-primary" id="btnVistaLista">
+                            <i class="bi bi-list-ul"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Grid de Productos -->
+                <div class="row g-4" id="productosContainer">
+                    <!-- Producto 1 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 shadow-sm product-card">
+                            <div class="position-relative">
+                                <div class="bg-secondary text-white text-center" style="height: 200px; display: flex; align-items: center; justify-content: center;">
+                                    <i class="bi bi-laptop fs-1"></i>
+                                </div>
+                                <span class="badge bg-danger position-absolute top-0 end-0 m-2">-20%</span>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Laptop Gamer XZ-2000</h5>
+                                <p class="card-text text-muted small">Procesador Intel i7, 16GB RAM, 512GB SSD</p>
+                                <div class="mb-2">
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-half text-warning"></i>
+                                    <span class="text-muted small">(124)</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <span class="text-muted text-decoration-line-through small">$1,299.99</span>
+                                        <h4 class="text-primary mb-0">$1,039.99</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-white border-0">
+                                <button class="btn btn-primary w-100 btnAgregarCarrito" data-producto-id="1">
+                                    <i class="bi bi-cart-plus"></i> Agregar al Carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Producto 2 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 shadow-sm product-card">
+                            <div class="position-relative">
+                                <div class="bg-secondary text-white text-center" style="height: 200px; display: flex; align-items: center; justify-content: center;">
+                                    <i class="bi bi-phone fs-1"></i>
+                                </div>
+                                <span class="badge bg-success position-absolute top-0 end-0 m-2">Nuevo</span>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Smartphone Pro Max</h5>
+                                <p class="card-text text-muted small">Pantalla 6.7", Cámara 108MP, 5G</p>
+                                <div class="mb-2">
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <span class="text-muted small">(89)</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h4 class="text-primary mb-0">$899.99</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-white border-0">
+                                <button class="btn btn-primary w-100 btnAgregarCarrito" data-producto-id="2">
+                                    <i class="bi bi-cart-plus"></i> Agregar al Carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Producto 3 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 shadow-sm product-card">
+                            <div class="bg-secondary text-white text-center" style="height: 200px; display: flex; align-items: center; justify-content: center;">
+                                <i class="bi bi-headphones fs-1"></i>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Audífonos Inalámbricos</h5>
+                                <p class="card-text text-muted small">Cancelación de ruido, Bluetooth 5.0</p>
+                                <div class="mb-2">
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star text-warning"></i>
+                                    <span class="text-muted small">(256)</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h4 class="text-primary mb-0">$199.99</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-white border-0">
+                                <button class="btn btn-primary w-100 btnAgregarCarrito" data-producto-id="3">
+                                    <i class="bi bi-cart-plus"></i> Agregar al Carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Producto 4 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 shadow-sm product-card">
+                            <div class="position-relative">
+                                <div class="bg-secondary text-white text-center" style="height: 200px; display: flex; align-items: center; justify-content: center;">
+                                    <i class="bi bi-smartwatch fs-1"></i>
+                                </div>
+                                <span class="badge bg-danger position-absolute top-0 end-0 m-2">-15%</span>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">SmartWatch Sport</h5>
+                                <p class="card-text text-muted small">Monitor cardíaco, GPS, resistente al agua</p>
+                                <div class="mb-2">
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-half text-warning"></i>
+                                    <span class="text-muted small">(178)</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <span class="text-muted text-decoration-line-through small">$349.99</span>
+                                        <h4 class="text-primary mb-0">$297.49</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-white border-0">
+                                <button class="btn btn-primary w-100 btnAgregarCarrito" data-producto-id="4">
+                                    <i class="bi bi-cart-plus"></i> Agregar al Carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Producto 5 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 shadow-sm product-card">
+                            <div class="bg-secondary text-white text-center" style="height: 200px; display: flex; align-items: center; justify-content: center;">
+                                <i class="bi bi-camera fs-1"></i>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Cámara Digital Pro</h5>
+                                <p class="card-text text-muted small">24MP, Video 4K, Lente intercambiable</p>
+                                <div class="mb-2">
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <span class="text-muted small">(95)</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h4 class="text-primary mb-0">$1,299.99</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-white border-0">
+                                <button class="btn btn-primary w-100 btnAgregarCarrito" data-producto-id="5">
+                                    <i class="bi bi-cart-plus"></i> Agregar al Carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Producto 6 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 shadow-sm product-card">
+                            <div class="position-relative">
+                                <div class="bg-secondary text-white text-center" style="height: 200px; display: flex; align-items: center; justify-content: center;">
+                                    <i class="bi bi-tablet fs-1"></i>
+                                </div>
+                                <span class="badge bg-success position-absolute top-0 end-0 m-2">Nuevo</span>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Tablet Ultra HD</h5>
+                                <p class="card-text text-muted small">Pantalla 11", 128GB, Soporte para stylus</p>
+                                <div class="mb-2">
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star text-warning"></i>
+                                    <span class="text-muted small">(67)</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h4 class="text-primary mb-0">$599.99</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-white border-0">
+                                <button class="btn btn-primary w-100 btnAgregarCarrito" data-producto-id="6">
+                                    <i class="bi bi-cart-plus"></i> Agregar al Carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paginación -->
+                <nav aria-label="Paginación de productos" class="mt-4">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#" data-page="2">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#" data-page="3">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Siguiente</a>
+                        </li>
+                    </ul>
+                </nav>
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white mt-5 py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5><i class="bi bi-shop"></i> E-commerce</h5>
+                    <p class="small">Tu tienda de confianza para encontrar los mejores productos al mejor precio.</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Enlaces Rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none small">Sobre Nosotros</a></li>
+                        <li><a href="#" class="text-white text-decoration-none small">Términos y Condiciones</a></li>
+                        <li><a href="#" class="text-white text-decoration-none small">Política de Privacidad</a></li>
+                        <li><a href="#" class="text-white text-decoration-none small">Preguntas Frecuentes</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Síguenos</h5>
+                    <div>
+                        <a href="#" class="text-white me-3"><i class="bi bi-facebook fs-4"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-twitter fs-4"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-instagram fs-4"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-youtube fs-4"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="bg-white">
+            <div class="text-center small">
+                <p class="mb-0">&copy; 2025 E-commerce. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5.3 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <!-- Archivo JS para manejar la lógica de inicio -->
+    <script src="assets/js/inicio.js"></script>
 </body>
 </html>

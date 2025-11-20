@@ -13,7 +13,7 @@
     * validamos que el usuario tenga las credenciales que vamos a definir como correctas (en duro en el codigo)
 
 - inicio
-    agregar un barr a de navegacion donde me permita ir a todas las otras vistas(Menu)
+    agregar un barra de navegacion donde me permita ir a todas las otras vistas(Menu)
     contenido principal y contenido secundario.
     agregar contenido acorde al producto o servicio que seleccionemos
 
