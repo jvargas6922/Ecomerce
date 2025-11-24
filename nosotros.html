@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros - E-commerce</title>
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body>
+    <!-- Barra de Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="inicio.html">
+                <i class="bi bi-shop"></i> E-commerce
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="inicio.html">
+                            <i class="bi bi-house-door"></i> Inicio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="nosotros.html" id="menuNosotros">
+                            <i class="bi bi-box-seam"></i> Nosotros
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="catalogo.html" id="menuCatalogo">
+                            <i class="bi bi-grid"></i> Catálogo
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html" id="menuContacto">
+                            <i class="bi bi-envelope"></i> Contacto
+                        </a>
+                    </li>
+                </ul>
+                <form class="d-flex me-3" role="search" id="formBuscar">
+                    <input class="form-control me-2" type="search" placeholder="Buscar productos..." aria-label="Search" id="searchInput">
+                    <button class="btn btn-light" type="submit" id="btnSearch">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </form>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="menuCarrito">
+                            <i class="bi bi-cart3"></i> Carrito
+                            <span class="badge bg-danger" id="cartCount">0</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html" id="menuLogin">
+                            <i class="bi bi-person-circle"></i> Cuenta
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="container mt-3">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="inicio.html" class="text-decoration-none">Inicio</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Nosotros</li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="bg-primary text-white py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-3">Sobre Nosotros</h1>
+                    <p class="lead mb-4">Somos una empresa comprometida con ofrecer los mejores productos tecnológicos al mejor precio, brindando una experiencia de compra excepcional.</p>
+                    <button class="btn btn-light btn-lg" id="btnConoceMas">
+                        <i class="bi bi-arrow-down-circle"></i> Conoce más
+                    </button>
+                </div>
+                <div class="col-lg-6 text-center mt-4 mt-lg-0">
+                    <div class="bg-white bg-opacity-10 rounded p-5">
+                        <i class="bi bi-building fs-1"></i>
+                        <h3 class="mt-3">Desde 2010</h3>
+                        <p>Más de 15 años de experiencia</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Estadísticas -->
+    <div class="container my-5">
+        <div class="row g-4 text-center">
+            <div class="col-lg-3 col-md-6">
+                <div class="card shadow-sm h-100 border-0">
+                    <div class="card-body">
+                        <div class="bg-primary bg-opacity-10 rounded-circle d-inline-flex p-4 mb-3">
+                            <i class="bi bi-people-fill text-primary fs-1"></i>
+                        </div>
+                        <h2 class="fw-bold text-primary" id="statClientes">50,000+</h2>
+                        <p class="text-muted mb-0">Clientes Satisfechos</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="card shadow-sm h-100 border-0">
+                    <div class="card-body">
+                        <div class="bg-success bg-opacity-10 rounded-circle d-inline-flex p-4 mb-3">
+                            <i class="bi bi-box-seam-fill text-success fs-1"></i>
+                        </div>
+                        <h2 class="fw-bold text-success" id="statProductos">5,000+</h2>
+                        <p class="text-muted mb-0">Productos Disponibles</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="card shadow-sm h-100 border-0">
+                    <div class="card-body">
+                        <div class="bg-warning bg-opacity-10 rounded-circle d-inline-flex p-4 mb-3">
+                            <i class="bi bi-star-fill text-warning fs-1"></i>
+                        </div>
+                        <h2 class="fw-bold text-warning" id="statCalificacion">4.8/5</h2>
+                        <p class="text-muted mb-0">Calificación Promedio</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="card shadow-sm h-100 border-0">
+                    <div class="card-body">
+                        <div class="bg-danger bg-opacity-10 rounded-circle d-inline-flex p-4 mb-3">
+                            <i class="bi bi-truck text-danger fs-1"></i>
+                        </div>
+                        <h2 class="fw-bold text-danger" id="statEnvios">100,000+</h2>
+                        <p class="text-muted mb-0">Envíos Realizados</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Nuestra Historia -->
+    <div class="bg-light py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="bg-secondary rounded p-5 text-center text-white">
+                        <i class="bi bi-clock-history fs-1"></i>
+                        <h3 class="mt-3">Nuestra Historia</h3>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="mb-4"><i class="bi bi-book text-primary"></i> Nuestra Historia</h2>
+                    <p class="mb-3">Fundada en 2010, <strong>E-commerce</strong> nació con la visión de revolucionar la forma en que las personas compran tecnología. Comenzamos como una pequeña tienda en línea y hemos crecido hasta convertirnos en uno de los líderes del mercado.</p>
+                    <p class="mb-3">A lo largo de los años, hemos mantenido nuestro compromiso con la calidad, la innovación y, sobre todo, la satisfacción del cliente. Cada producto que vendemos es cuidadosamente seleccionado para garantizar que cumpla con los más altos estándares.</p>
+                    <p class="mb-0">Hoy, con más de 50,000 clientes satisfechos y presencia en todo el país, seguimos trabajando para ofrecerte la mejor experiencia de compra en línea.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Misión, Visión y Valores -->
+    <div class="container my-5">
+        <div class="text-center mb-5">
+            <h2 class="display-6 fw-bold">Nuestros Pilares</h2>
+            <p class="text-muted">Los valores que nos guían cada día</p>
+        </div>
+        
+        <div class="row g-4">
+            <!-- Misión -->
+            <div class="col-lg-4">
+                <div class="card shadow-sm h-100 border-0">
+                    <div class="card-body text-center p-4">
+                        <div class="bg-primary bg-opacity-10 rounded-circle d-inline-flex p-4 mb-3">
+                            <i class="bi bi-bullseye text-primary fs-1"></i>
+                        </div>
+                        <h4 class="card-title mb-3">Misión</h4>
+                        <p class="card-text">Proporcionar productos tecnológicos de alta calidad a precios accesibles, facilitando el acceso a la tecnología para todos nuestros clientes y mejorando su calidad de vida.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Visión -->
+            <div class="col-lg-4">
+                <div class="card shadow-sm h-100 border-0">
+                    <div class="card-body text-center p-4">
+                        <div class="bg-success bg-opacity-10 rounded-circle d-inline-flex p-4 mb-3">
+                            <i class="bi bi-eye text-success fs-1"></i>
+                        </div>
+                        <h4 class="card-title mb-3">Visión</h4>
+                        <p class="card-text">Ser la plataforma de e-commerce líder en América Latina, reconocida por nuestra excelencia en servicio al cliente, innovación constante y compromiso con la sostenibilidad.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Valores -->
+            <div class="col-lg-4">
+                <div class="card shadow-sm h-100 border-0">
+                    <div class="card-body text-center p-4">
+                        <div class="bg-warning bg-opacity-10 rounded-circle d-inline-flex p-4 mb-3">
+                            <i class="bi bi-gem text-warning fs-1"></i>
+                        </div>
+                        <h4 class="card-title mb-3">Valores</h4>
+                        <ul class="list-unstyled text-start">
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Integridad</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Innovación</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Calidad</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Compromiso</li>
+                            <li class="mb-0"><i class="bi bi-check-circle-fill text-success me-2"></i> Excelencia</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Nuestro Equipo -->
+    <div class="bg-light py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-6 fw-bold">Nuestro Equipo</h2>
+                <p class="text-muted">Conoce a las personas detrás de E-commerce</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Miembro 1 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card shadow-sm border-0 text-center h-100">
+                        <div class="card-body p-4">
+                            <div class="bg-primary bg-opacity-10 rounded-circle d-inline-flex p-4 mb-3">
+                                <i class="bi bi-person-circle text-primary" style="font-size: 4rem;"></i>
+                            </div>
+                            <h5 class="card-title mb-1">Ana García</h5>
+                            <p class="text-primary small mb-3">CEO & Fundadora</p>
+                            <p class="card-text small text-muted">Líder visionaria con más de 15 años de experiencia en e-commerce.</p>
+                            <div class="mt-3">
+                                <a href="#" class="text-decoration-none me-2" id="anaLinkedin"><i class="bi bi-linkedin"></i></a>
+                                <a href="#" class="text-decoration-none me-2" id="anaTwitter"><i class="bi bi-twitter"></i></a>
+                                <a href="#" class="text-decoration-none" id="anaEmail"><i class="bi bi-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Miembro 2 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card shadow-sm border-0 text-center h-100">
+                        <div class="card-body p-4">
+                            <div class="bg-success bg-opacity-10 rounded-circle d-inline-flex p-4 mb-3">
+                                <i class="bi bi-person-circle text-success" style="font-size: 4rem;"></i>
+                            </div>
+                            <h5 class="card-title mb-1">Carlos Martínez</h5>
+                            <p class="text-success small mb-3">Director de Tecnología</p>
+                            <p class="card-text small text-muted">Experto en desarrollo y arquitectura de plataformas digitales.</p>
+                            <div class="mt-3">
+                                <a href="#" class="text-decoration-none me-2" id="carlosLinkedin"><i class="bi bi-linkedin"></i></a>
+                                <a href="#" class="text-decoration-none me-2" id="carlosTwitter"><i class="bi bi-twitter"></i></a>
+                                <a href="#" class="text-decoration-none" id="carlosEmail"><i class="bi bi-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Miembro 3 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card shadow-sm border-0 text-center h-100">
+                        <div class="card-body p-4">
+                            <div class="bg-warning bg-opacity-10 rounded-circle d-inline-flex p-4 mb-3">
+                                <i class="bi bi-person-circle text-warning" style="font-size: 4rem;"></i>
+                            </div>
+                            <h5 class="card-title mb-1">María López</h5>
+                            <p class="text-warning small mb-3">Gerente de Marketing</p>
+                            <p class="card-text small text-muted">Especialista en estrategias digitales y experiencia del cliente.</p>
+                            <div class="mt-3">
+                                <a href="#" class="text-decoration-none me-2" id="mariaLinkedin"><i class="bi bi-linkedin"></i></a>
+                                <a href="#" class="text-decoration-none me-2" id="mariaTwitter"><i class="bi bi-twitter"></i></a>
+                                <a href="#" class="text-decoration-none" id="mariaEmail"><i class="bi bi-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Miembro 4 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card shadow-sm border-0 text-center h-100">
+                        <div class="card-body p-4">
+                            <div class="bg-danger bg-opacity-10 rounded-circle d-inline-flex p-4 mb-3">
+                                <i class="bi bi-person-circle text-danger" style="font-size: 4rem;"></i>
+                            </div>
+                            <h5 class="card-title mb-1">Juan Rodríguez</h5>
+                            <p class="text-danger small mb-3">Director de Operaciones</p>
+                            <p class="card-text small text-muted">Gestor de logística y optimización de procesos operativos.</p>
+                            <div class="mt-3">
+                                <a href="#" class="text-decoration-none me-2" id="juanLinkedin"><i class="bi bi-linkedin"></i></a>
+                                <a href="#" class="text-decoration-none me-2" id="juanTwitter"><i class="bi bi-twitter"></i></a>
+                                <a href="#" class="text-decoration-none" id="juanEmail"><i class="bi bi-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Por qué elegirnos -->
+    <div class="container my-5">
+        <div class="text-center mb-5">
+            <h2 class="display-6 fw-bold">¿Por Qué Elegirnos?</h2>
+            <p class="text-muted">Razones para confiar en nosotros</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-start">
+                            <div class="bg-primary bg-opacity-10 rounded p-3 me-3">
+                                <i class="bi bi-shield-check text-primary fs-3"></i>
+                            </div>
+                            <div>
+                                <h5 class="card-title">Compra Segura</h5>
+                                <p class="card-text text-muted">Tus datos y transacciones están protegidos con la mejor tecnología de seguridad.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-start">
+                            <div class="bg-success bg-opacity-10 rounded p-3 me-3">
+                                <i class="bi bi-truck text-success fs-3"></i>
+                            </div>
+                            <div>
+                                <h5 class="card-title">Envío Rápido</h5>
+                                <p class="card-text text-muted">Entregamos tus productos en tiempo récord a cualquier parte del país.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-start">
+                            <div class="bg-warning bg-opacity-10 rounded p-3 me-3">
+                                <i class="bi bi-award text-warning fs-3"></i>
+                            </div>
+                            <div>
+                                <h5 class="card-title">Calidad Garantizada</h5>
+                                <p class="card-text text-muted">Todos nuestros productos cuentan con garantía y soporte técnico.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-start">
+                            <div class="bg-danger bg-opacity-10 rounded p-3 me-3">
+                                <i class="bi bi-headset text-danger fs-3"></i>
+                            </div>
+                            <div>
+                                <h5 class="card-title">Soporte 24/7</h5>
+                                <p class="card-text text-muted">Nuestro equipo está disponible las 24 horas para ayudarte.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-start">
+                            <div class="bg-info bg-opacity-10 rounded p-3 me-3">
+                                <i class="bi bi-arrow-repeat text-info fs-3"></i>
+                            </div>
+                            <div>
+                                <h5 class="card-title">Devoluciones Fáciles</h5>
+                                <p class="card-text text-muted">30 días para devolver tu producto sin complicaciones.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-start">
+                            <div class="bg-secondary bg-opacity-10 rounded p-3 me-3">
+                                <i class="bi bi-piggy-bank text-secondary fs-3"></i>
+                            </div>
+                            <div>
+                                <h5 class="card-title">Mejores Precios</h5>
+                                <p class="card-text text-muted">Ofrecemos los precios más competitivos del mercado.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="bg-primary text-white py-5">
+        <div class="container text-center">
+            <h2 class="mb-3">¿Listo para comenzar?</h2>
+            <p class="lead mb-4">Únete a miles de clientes satisfechos y descubre por qué somos la mejor opción</p>
+            <div class="d-flex gap-3 justify-content-center flex-wrap">
+                <button class="btn btn-light btn-lg" id="btnVerCatalogo">
+                    <i class="bi bi-grid-3x3-gap me-2"></i>Ver Catálogo
+                </button>
+                <button class="btn btn-outline-light btn-lg" id="btnContactanos">
+                    <i class="bi bi-envelope me-2"></i>Contáctanos
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white mt-5 py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5><i class="bi bi-shop"></i> E-commerce</h5>
+                    <p class="small">Tu tienda de confianza para encontrar los mejores productos al mejor precio.</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Enlaces Rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="nosotros.html" class="text-white text-decoration-none small">Sobre Nosotros</a></li>
+                        <li><a href="#" class="text-white text-decoration-none small">Términos y Condiciones</a></li>
+                        <li><a href="#" class="text-white text-decoration-none small">Política de Privacidad</a></li>
+                        <li><a href="#" class="text-white text-decoration-none small">Preguntas Frecuentes</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Síguenos</h5>
+                    <div>
+                        <a href="#" class="text-white me-3"><i class="bi bi-facebook fs-4"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-twitter fs-4"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-instagram fs-4"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-youtube fs-4"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="bg-white">
+            <div class="text-center small">
+                <p class="mb-0">&copy; 2025 E-commerce. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5.3 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <!-- Archivo JS para manejar la lógica de nosotros -->
+    <script src="assets/js/nosotros.js"></script>
+</body>
+</html>

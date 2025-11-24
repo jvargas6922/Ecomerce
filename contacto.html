@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - E-commerce</title>
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body>
+    <!-- Barra de Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="inicio.html">
+                <i class="bi bi-shop"></i> E-commerce
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="inicio.html">
+                            <i class="bi bi-house-door"></i> Inicio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nosotros.html" id="menuNosotros">
+                            <i class="bi bi-box-seam"></i> Nosotros
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="catalogo.html" id="menuCatalogo">
+                            <i class="bi bi-grid"></i> Catalogo
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html" id="menuContacto">
+                            <i class="bi bi-envelope"></i> Contacto
+                        </a>
+                    </li>
+                </ul>
+                <form class="d-flex me-3" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Buscar productos..." aria-label="Search" id="searchInput">
+                    <button class="btn btn-light" type="submit" id="btnSearch">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </form>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="carrito.html" id="menuCarrito">
+                            <i class="bi bi-cart3"></i> Carrito
+                            <span class="badge bg-danger" id="cartCount">0</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html" id="menuLogin">
+                            <i class="bi bi-person-circle"></i> Iniciar Sesión
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="container mt-3">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="inicio.html" class="text-decoration-none">Inicio</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Contacto</li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- Encabezado -->
+    <div class="container my-4">
+        <div class="text-center mb-5">
+            <h1 class="display-4"><i class="bi bi-envelope-heart text-primary"></i> Contáctanos</h1>
+            <p class="lead text-muted">Estamos aquí para ayudarte. Envíanos un mensaje y te responderemos pronto.</p>
+        </div>
+
+        <div class="row g-4">
+            <!-- Información de Contacto -->
+            <div class="col-lg-4">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h4 class="card-title mb-4"><i class="bi bi-info-circle text-primary"></i> Información</h4>
+                        
+                        <!-- Dirección -->
+                        <div class="mb-4">
+                            <div class="d-flex align-items-start">
+                                <div class="bg-primary bg-opacity-10 rounded p-3 me-3">
+                                    <i class="bi bi-geo-alt-fill text-primary fs-4"></i>
+                                </div>
+                                <div>
+                                    <h6 class="fw-bold mb-1">Dirección</h6>
+                                    <p class="text-muted mb-0">Av. Principal 123<br>Ciudad, País<br>Código Postal 12345</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Teléfono -->
+                        <div class="mb-4">
+                            <div class="d-flex align-items-start">
+                                <div class="bg-success bg-opacity-10 rounded p-3 me-3">
+                                    <i class="bi bi-telephone-fill text-success fs-4"></i>
+                                </div>
+                                <div>
+                                    <h6 class="fw-bold mb-1">Teléfono</h6>
+                                    <p class="text-muted mb-0">+1 (555) 123-4567<br>+1 (555) 987-6543</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="mb-4">
+                            <div class="d-flex align-items-start">
+                                <div class="bg-danger bg-opacity-10 rounded p-3 me-3">
+                                    <i class="bi bi-envelope-fill text-danger fs-4"></i>
+                                </div>
+                                <div>
+                                    <h6 class="fw-bold mb-1">Email</h6>
+                                    <p class="text-muted mb-0">info@ecommerce.com<br>soporte@ecommerce.com</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Horario -->
+                        <div class="mb-4">
+                            <div class="d-flex align-items-start">
+                                <div class="bg-warning bg-opacity-10 rounded p-3 me-3">
+                                    <i class="bi bi-clock-fill text-warning fs-4"></i>
+                                </div>
+                                <div>
+                                    <h6 class="fw-bold mb-1">Horario de Atención</h6>
+                                    <p class="text-muted mb-0">Lunes - Viernes: 9:00 - 18:00<br>Sábado: 10:00 - 14:00<br>Domingo: Cerrado</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Redes Sociales -->
+                        <div>
+                            <h6 class="fw-bold mb-3">Síguenos</h6>
+                            <div class="d-flex gap-2">
+                                <a href="#" class="btn btn-outline-primary btn-sm" id="btnFacebook">
+                                    <i class="bi bi-facebook"></i>
+                                </a>
+                                <a href="#" class="btn btn-outline-info btn-sm" id="btnTwitter">
+                                    <i class="bi bi-twitter"></i>
+                                </a>
+                                <a href="#" class="btn btn-outline-danger btn-sm" id="btnInstagram">
+                                    <i class="bi bi-instagram"></i>
+                                </a>
+                                <a href="#" class="btn btn-outline-danger btn-sm" id="btnYoutube">
+                                    <i class="bi bi-youtube"></i>
+                                </a>
+                                <a href="#" class="btn btn-outline-primary btn-sm" id="btnLinkedin">
+                                    <i class="bi bi-linkedin"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Formulario de Contacto -->
+            <div class="col-lg-8">
+                <div class="card shadow-sm">
+                    <div class="card-body p-4">
+                        <h4 class="card-title mb-4"><i class="bi bi-chat-dots text-primary"></i> Envíanos un Mensaje</h4>
+                        
+                        <form id="formContacto">
+                            <div class="row g-3">
+                                <!-- Nombre -->
+                                <div class="col-md-6">
+                                    <label for="nombre" class="form-label">Nombre Completo <span class="text-danger">*</span></label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-person"></i></span>
+                                        <input type="text" class="form-control" id="nombre" placeholder="Juan Pérez" required>
+                                    </div>
+                                </div>
+
+                                <!-- Email -->
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">Correo Electrónico <span class="text-danger">*</span></label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                                        <input type="email" class="form-control" id="email" placeholder="correo@ejemplo.com" required>
+                                    </div>
+                                </div>
+
+                                <!-- Teléfono -->
+                                <div class="col-md-6">
+                                    <label for="telefono" class="form-label">Teléfono</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-telephone"></i></span>
+                                        <input type="tel" class="form-control" id="telefono" placeholder="+1 (555) 123-4567">
+                                    </div>
+                                </div>
+
+                                <!-- Asunto -->
+                                <div class="col-md-6">
+                                    <label for="asunto" class="form-label">Asunto <span class="text-danger">*</span></label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-tag"></i></span>
+                                        <select class="form-select" id="asunto" required>
+                                            <option value="">Selecciona una opción...</option>
+                                            <option value="consulta">Consulta General</option>
+                                            <option value="soporte">Soporte Técnico</option>
+                                            <option value="venta">Información de Venta</option>
+                                            <option value="devolucion">Devolución/Garantía</option>
+                                            <option value="sugerencia">Sugerencia</option>
+                                            <option value="reclamo">Reclamo</option>
+                                            <option value="otro">Otro</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- Mensaje -->
+                                <div class="col-12">
+                                    <label for="mensaje" class="form-label">Mensaje <span class="text-danger">*</span></label>
+                                    <textarea class="form-control" id="mensaje" rows="6" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                                    <div class="form-text">Mínimo 10 caracteres. <span id="contadorCaracteres">0</span> caracteres</div>
+                                </div>
+
+                                <!-- Checkbox de términos -->
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="aceptarTerminos" required>
+                                        <label class="form-check-label" for="aceptarTerminos">
+                                            Acepto los <a href="#" class="text-decoration-none">términos y condiciones</a> y la <a href="#" class="text-decoration-none">política de privacidad</a> <span class="text-danger">*</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- Checkbox de copia -->
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="recibirCopia">
+                                        <label class="form-check-label" for="recibirCopia">
+                                            Enviarme una copia de este mensaje
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- Botones -->
+                                <div class="col-12">
+                                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                        <button type="reset" class="btn btn-outline-secondary" id="btnLimpiar">
+                                            <i class="bi bi-x-circle"></i> Limpiar
+                                        </button>
+                                        <button type="submit" class="btn btn-primary" id="btnEnviar">
+                                            <i class="bi bi-send"></i> Enviar Mensaje
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mapa -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0"><i class="bi bi-map"></i> Nuestra Ubicación</h5>
+                    </div>
+                    <div class="card-body p-0">
+                        <!-- Placeholder para mapa (puedes integrarlo con Google Maps o similar) -->
+                        <div id="mapa" class="bg-light" style="height: 400px; display: flex; align-items: center; justify-content: center;">
+                            <div class="text-center text-muted">
+                                <i class="bi bi-geo-alt fs-1"></i>
+                                <p class="mt-2">Mapa de ubicación<br><small>Integrar con Google Maps API</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección de Preguntas Frecuentes -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-secondary text-white">
+                        <h5 class="mb-0"><i class="bi bi-question-circle"></i> Preguntas Frecuentes</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="accordion" id="accordionFAQ">
+                            <!-- Pregunta 1 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1" id="btnFaq1">
+                                        ¿Cuáles son los métodos de pago disponibles?
+                                    </button>
+                                </h2>
+                                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#accordionFAQ">
+                                    <div class="accordion-body">
+                                        Aceptamos tarjetas de crédito y débito (Visa, Mastercard, American Express), PayPal, transferencias bancarias y pago contra entrega en zonas seleccionadas.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Pregunta 2 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2" id="btnFaq2">
+                                        ¿Cuánto tiempo tarda el envío?
+                                    </button>
+                                </h2>
+                                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                                    <div class="accordion-body">
+                                        El tiempo de envío varía según tu ubicación. Generalmente, los envíos nacionales tardan entre 3-5 días hábiles, mientras que los envíos internacionales pueden tardar de 7-15 días hábiles.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Pregunta 3 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3" id="btnFaq3">
+                                        ¿Cuál es la política de devoluciones?
+                                    </button>
+                                </h2>
+                                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                                    <div class="accordion-body">
+                                        Ofrecemos devoluciones gratuitas dentro de los 30 días posteriores a la compra. Los productos deben estar en su estado original, sin usar y con el embalaje intacto.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Pregunta 4 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4" id="btnFaq4">
+                                        ¿Ofrecen garantía en los productos?
+                                    </button>
+                                </h2>
+                                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                                    <div class="accordion-body">
+                                        Sí, todos nuestros productos cuentan con garantía del fabricante. El período de garantía varía según el producto, pero generalmente es de 1 a 2 años.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white mt-5 py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5><i class="bi bi-shop"></i> E-commerce</h5>
+                    <p class="small">Tu tienda de confianza para encontrar los mejores productos al mejor precio.</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Enlaces Rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none small">Sobre Nosotros</a></li>
+                        <li><a href="#" class="text-white text-decoration-none small">Términos y Condiciones</a></li>
+                        <li><a href="#" class="text-white text-decoration-none small">Política de Privacidad</a></li>
+                        <li><a href="#" class="text-white text-decoration-none small">Preguntas Frecuentes</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Síguenos</h5>
+                    <div>
+                        <a href="#" class="text-white me-3"><i class="bi bi-facebook fs-4"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-twitter fs-4"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-instagram fs-4"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-youtube fs-4"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="bg-white">
+            <div class="text-center small">
+                <p class="mb-0">&copy; 2025 E-commerce. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5.3 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <!-- Archivo JS para manejar la lógica de contacto -->
+    <script src="assets/js/contacto.js"></script>
+</body>
+</html>

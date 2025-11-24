@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo - E-commerce</title>
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body>
+    <!-- Barra de Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="inicio.html">
+                <i class="bi bi-shop"></i> E-commerce
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="inicio.html">
+                            <i class="bi bi-house-door"></i> Inicio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nosotros.html" id="menuNosotros">
+                            <i class="bi bi-box-seam"></i> Nosotros
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="catalogo.html" id="menuCatalogo">
+                            <i class="bi bi-grid"></i> Catalogo
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html" id="menuContacto">
+                            <i class="bi bi-envelope"></i> Contacto
+                        </a>
+                    </li>
+                </ul>
+                <form class="d-flex me-3" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Buscar productos..." aria-label="Search" id="searchInput">
+                    <button class="btn btn-light" type="submit" id="btnSearch">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </form>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="carrito.html" id="menuCarrito">
+                            <i class="bi bi-cart3"></i> Carrito
+                            <span class="badge bg-danger" id="cartCount">0</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html" id="menuLogin">
+                            <i class="bi bi-person-circle"></i> Iniciar Sesión
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="container-fluid mt-3">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="inicio.html" class="text-decoration-none">Inicio</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Catálogo</li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- Contenido Principal -->
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar - Filtros -->
+            <aside class="col-lg-3 col-md-4 mb-4">
+                <div class="card shadow-sm sticky-top" style="top: 20px;">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0"><i class="bi bi-funnel"></i> Filtros</h5>
+                    </div>
+                    <div class="card-body">
+                        <!-- Categorías -->
+                        <div class="mb-4">
+                            <h6 class="fw-bold mb-3">Categorías</h6>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="todos" id="catTodos" checked>
+                                <label class="form-check-label" for="catTodos">
+                                    Todos los productos
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="computadoras" id="catComputadoras">
+                                <label class="form-check-label" for="catComputadoras">
+                                    Computadoras
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="smartphones" id="catSmartphones">
+                                <label class="form-check-label" for="catSmartphones">
+                                    Smartphones
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="audio" id="catAudio">
+                                <label class="form-check-label" for="catAudio">
+                                    Audio
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="wearables" id="catWearables">
+                                <label class="form-check-label" for="catWearables">
+                                    Wearables
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="camaras" id="catCamaras">
+                                <label class="form-check-label" for="catCamaras">
+                                    Cámaras
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="tablets" id="catTablets">
+                                <label class="form-check-label" for="catTablets">
+                                    Tablets
+                                </label>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <!-- Rango de Precio -->
+                        <div class="mb-4">
+                            <h6 class="fw-bold mb-3">Rango de Precio</h6>
+                            <div class="mb-3">
+                                <label for="precioMin" class="form-label small">Mínimo: $<span id="precioMinValue">0</span></label>
+                                <input type="range" class="form-range" min="0" max="2000" step="50" value="0" id="precioMin">
+                            </div>
+                            <div class="mb-3">
+                                <label for="precioMax" class="form-label small">Máximo: $<span id="precioMaxValue">2000</span></label>
+                                <input type="range" class="form-range" min="0" max="2000" step="50" value="2000" id="precioMax">
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <!-- Calificación -->
+                        <div class="mb-4">
+                            <h6 class="fw-bold mb-3">Calificación</h6>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="rating" id="rating5" value="5">
+                                <label class="form-check-label" for="rating5">
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    5 estrellas
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="rating" id="rating4" value="4">
+                                <label class="form-check-label" for="rating4">
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star text-warning"></i>
+                                    4+ estrellas
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="rating" id="rating3" value="3">
+                                <label class="form-check-label" for="rating3">
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star text-warning"></i>
+                                    <i class="bi bi-star text-warning"></i>
+                                    3+ estrellas
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="rating" id="ratingAll" value="0" checked>
+                                <label class="form-check-label" for="ratingAll">
+                                    Todas las calificaciones
+                                </label>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <!-- Disponibilidad -->
+                        <div class="mb-4">
+                            <h6 class="fw-bold mb-3">Disponibilidad</h6>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="enStock" id="disponibleStock" checked>
+                                <label class="form-check-label" for="disponibleStock">
+                                    En stock
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="oferta" id="disponibleOferta">
+                                <label class="form-check-label" for="disponibleOferta">
+                                    En oferta
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Botones de acción -->
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-primary" id="btnAplicarFiltros">
+                                <i class="bi bi-check2-circle"></i> Aplicar Filtros
+                            </button>
+                            <button class="btn btn-outline-secondary" id="btnLimpiarFiltros">
+                                <i class="bi bi-x-circle"></i> Limpiar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Contenido Principal - Productos -->
+            <main class="col-lg-9 col-md-8">
+                <!-- Encabezado con controles -->
+                <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap">
+                    <div class="mb-2">
+                        <h3><i class="bi bi-grid-3x3-gap"></i> Catálogo de Productos</h3>
+                        <p class="text-muted mb-0">Mostrando <span id="totalProductos">0</span> productos</p>
+                    </div>
+                    <div class="d-flex gap-2 align-items-center flex-wrap">
+                        <!-- Selector de ordenamiento -->
+                        <select class="form-select form-select-sm" id="selectOrdenar" style="width: auto;">
+                            <option value="relevancia">Más relevantes</option>
+                            <option value="precio-asc">Precio: menor a mayor</option>
+                            <option value="precio-desc">Precio: mayor a menor</option>
+                            <option value="nombre-asc">Nombre: A-Z</option>
+                            <option value="nombre-desc">Nombre: Z-A</option>
+                            <option value="rating">Mejor calificados</option>
+                        </select>
+                        
+                        <!-- Botones de vista -->
+                        <div class="btn-group" role="group" aria-label="Vista">
+                            <button type="button" class="btn btn-outline-primary active" id="btnVistaGrid">
+                                <i class="bi bi-grid-3x3-gap"></i>
+                            </button>
+                            <button type="button" class="btn btn-outline-primary" id="btnVistaLista">
+                                <i class="bi bi-list-ul"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Filtros activos (chips) -->
+                <div class="mb-3" id="filtrosActivos">
+                    <!-- Los filtros activos se mostrarán aquí dinámicamente -->
+                </div>
+
+                <!-- Grid de Productos -->
+                <div class="row g-4" id="productosContainer">
+                    <!-- Los productos se cargarán dinámicamente aquí -->
+                    <!-- Ejemplo de estructura de producto (comentado para que lo agregues con JS): -->
+                    <!--
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 shadow-sm product-card">
+                            <div class="position-relative">
+                                <div class="bg-secondary text-white text-center" style="height: 200px; display: flex; align-items: center; justify-content: center;">
+                                    <i class="bi bi-laptop fs-1"></i>
+                                </div>
+                                <span class="badge bg-danger position-absolute top-0 end-0 m-2">-20%</span>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Nombre del Producto</h5>
+                                <p class="card-text text-muted small">Descripción breve</p>
+                                <div class="mb-2">
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-half text-warning"></i>
+                                    <span class="text-muted small">(124)</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <span class="text-muted text-decoration-line-through small">$1,299.99</span>
+                                        <h4 class="text-primary mb-0">$1,039.99</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-white border-0">
+                                <button class="btn btn-primary w-100 btnAgregarCarrito" data-producto-id="1">
+                                    <i class="bi bi-cart-plus"></i> Agregar al Carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    -->
+                </div>
+
+                <!-- Mensaje cuando no hay productos -->
+                <div class="text-center py-5 d-none" id="noProductos">
+                    <i class="bi bi-inbox fs-1 text-muted"></i>
+                    <h4 class="text-muted mt-3">No se encontraron productos</h4>
+                    <p class="text-muted">Intenta ajustar los filtros o realiza una nueva búsqueda</p>
+                </div>
+
+                <!-- Spinner de carga -->
+                <div class="text-center py-5 d-none" id="spinnerCarga">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Cargando...</span>
+                    </div>
+                    <p class="text-muted mt-3">Cargando productos...</p>
+                </div>
+
+                <!-- Paginación -->
+                <nav aria-label="Paginación de productos" class="mt-4" id="paginacion">
+                    <ul class="pagination justify-content-center" id="paginacionList">
+                        <!-- La paginación se generará dinámicamente -->
+                    </ul>
+                </nav>
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white mt-5 py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5><i class="bi bi-shop"></i> E-commerce</h5>
+                    <p class="small">Tu tienda de confianza para encontrar los mejores productos al mejor precio.</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Enlaces Rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none small">Sobre Nosotros</a></li>
+                        <li><a href="#" class="text-white text-decoration-none small">Términos y Condiciones</a></li>
+                        <li><a href="#" class="text-white text-decoration-none small">Política de Privacidad</a></li>
+                        <li><a href="#" class="text-white text-decoration-none small">Preguntas Frecuentes</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Síguenos</h5>
+                    <div>
+                        <a href="#" class="text-white me-3"><i class="bi bi-facebook fs-4"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-twitter fs-4"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-instagram fs-4"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-youtube fs-4"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="bg-white">
+            <div class="text-center small">
+                <p class="mb-0">&copy; 2025 E-commerce. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5.3 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <!-- Archivo JS para manejar la lógica del catálogo -->
+    <script src="assets/js/catalogo.js"></script>
+</body>
+</html>

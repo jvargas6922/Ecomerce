@@ -5,7 +5,6 @@ $(document).ready(function() {
 //arreglo (Array)
 // productos = ['pelota','zapato','camisa','pantalon']
 
-
 // objeto (Object)
 // estructura de datos
 /*
@@ -42,10 +41,34 @@ let  productos = [
         calificacion:256,
         precio_lista: '',
         precio_oferta: 19999
+    },
+    {
+        id:4, 
+        nombre_producto:'Smartwatch Series 5',
+        descripcion_producto:"Monitor de ritmo cardíaco, GPS integrado", 
+        calificacion:178,
+        precio_lista: 24999,
+        precio_oferta: 19999
+    },
+    {
+        id:5,
+        nombre_producto: "Cámara Digital Pro",
+        descripcion_producto:"24MP, Video 4K, Lente intercambiable",
+        calificacion: 95,
+        precio_lista: 129999,
+        precio_oferta: 43999
+    },
+    {
+        id:6,
+        nombre_producto: "Tablet Ultra HD",
+        descripcion_producto:"Pantalla 11\", 128GB, Soporte para lápiz",
+        calificacion: 67,
+        precio_lista: 59999,
+        precio_oferta: 45999
     }
+
 ]
 
-console.log(productos)
 let listado_productos = $('#productosContainer');
 // recorrer el arreglo de objetos de productos
 productos.forEach(function(producto){
